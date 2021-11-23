@@ -19,6 +19,13 @@ from .views import *
 
 urlpatterns = [
     # 登陆模块
-    path('',LoginViews.index),
-    path('/login',LoginViews.login),
+    path('',LoginViews.index,name="All_index"),
+    path('login/',LoginViews.login,name="Login_index"),
+    path('dologin/',LoginViews.dologin,name="Login_dologin"),
+    path('yzm/',LoginViews.check_code,name="Login_check_code"),
+
+    # 注册模块
+    path('register/',LoginViews.register,name="Login_register"),
+    path('doregister/', LoginViews.doregister, name="Login_doregister"),
+
 ]
